@@ -36,11 +36,11 @@ public class Main {
         dog.takeForAWalk();
         dog.feed();
         //System.out.println(daria.pet.species);
-        Car auto = new Car("93","Sab Auto Mobile");
+        Car auto = new Car("93","Sab Auto Mobile",1996);
         auto.color = "Pink";
         auto.value = 6322345.02;
 
-        Car auto2 = new Car("93","Sab Auto Mobile");
+        Car auto2 = new Car("93","Sab Auto Mobile",1996);
         auto2.color = "Pink";
         auto2.value = 6322345.02;
 
@@ -74,9 +74,9 @@ public class Main {
         System.out.println(auto);
         System.out.println(dog);
 
-        Phone phone1 = new Phone("samsung","a34",16.0,"ddd");
+        //Phone phone1 = new Phone("samsung","a34",16.0,"ddd");
 
-        System.out.println(phone1);
+        //System.out.println(phone1);
 
 
     }

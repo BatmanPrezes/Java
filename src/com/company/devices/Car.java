@@ -1,16 +1,23 @@
 package com.company.devices;
 
-public class Car {
+public class Car extends Devices{
 
-    final public String model;
-    final public String producer;
     public String color;
     public Double value;
 
-    public Car(String model, String producer) {
-        this.model = model;
-        this.producer = producer;
+    public Car(String model, String producer, Integer yearOfProductions) {
+        super(model, producer, yearOfProductions);
     }
+
+
+    public Car(String model, String producer, Integer yearOfProductions, String color,Double value) {
+        super(model, producer, yearOfProductions);
+        this.color = color;
+        this.value=value;
+    }
+
+
+
 
     public boolean equals(Object o) {
         if (o instanceof Car) {
