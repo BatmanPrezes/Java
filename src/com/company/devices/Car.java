@@ -9,6 +9,11 @@ public class Car extends Devices{
         super(model, producer, yearOfProductions);
     }
 
+    @java.lang.Override
+    public void turnOn() {
+        System.out.println("kopnij silnik aż zaskoczy");
+    }
+
 
     public Car(String model, String producer, Integer yearOfProductions, String color,Double value) {
         super(model, producer, yearOfProductions);

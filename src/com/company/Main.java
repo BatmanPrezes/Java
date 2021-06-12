@@ -1,9 +1,12 @@
 package com.company;
 
+import com.company.devices.Devices;
 import com.company.devices.Phone;
 import com.company.devices.Car;
+import com.company.devices.Devices;
 
 public class Main {
+
 
     public static void main(String[] args) {
         Animal dog = new Animal("canis familiaris");
@@ -77,6 +80,9 @@ public class Main {
         //Phone phone1 = new Phone("samsung","a34",16.0,"ddd");
 
         //System.out.println(phone1);
+
+        //Devices fridge = new Devices("szajsung","blablabla",2333);
+
 
 
     }

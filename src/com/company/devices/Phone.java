@@ -9,8 +9,13 @@ public class Phone extends Devices{
         super(model, producer, yearOfProductions);
     }
 
+    @java.lang.Override
+    public void turnOn() {
+        System.out.println("stuknij w szybkę może zadziała");
+    }
 
-   // public String toString(){
+
+    // public String toString(){
    //     return producer+" "+model+" "+screenSize+" "+os;
    // }
 }

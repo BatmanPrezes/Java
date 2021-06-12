@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Devices {
+abstract  public class Devices {
     public final String producer;
     public final String model;
 
@@ -11,6 +11,8 @@ public class Devices {
         this.producer = producer;
         this.yearOfProductions = yearOfProductions;
     }
+
+    abstract public void turnOn();
 
     public String toString(){
         return producer+" "+model+" "+yearOfProductions;
