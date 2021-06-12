@@ -40,5 +40,19 @@ public class Main {
         daria.car = auto;
 
 
+       daria.setSalary(44.0);
+        daria.setSalary(-10.0);
+        daria.setSalary(2000.0);
+
+        daria.setSalary(144.0);
+
+       daria.setSalary(4424.0);
+
+       Double hajs = daria.getSalary();
+       System.out.println("Obecnie mam: " + hajs);
+
+
+
+
     }
 }
