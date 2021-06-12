@@ -7,7 +7,7 @@ public class Human {
     String lastName;
     Phone phone;
     Animal pet;
-    Car car;
+    private Car car;
     private Double salary;
 
     // Getter
@@ -31,6 +31,25 @@ public class Human {
         this.salary = newSalary;}
 
         else {System.out.println("Wartość wypłaty nie może być ujemna\n");}
+    }
+
+    // Getter
+    public Car getCar() {
+        return car;
+    }
+
+    // Setter
+    public void setCar(Car newCar) {
+
+        if(newCar.value<this.salary) {
+            System.out.println("Udało Ci się zakupić auto producenta " + newCar.producer +  "\n");
+            this.car= newCar;}
+        else if((newCar.value/12)<this.salary)
+        {
+            System.out.println("Udało Ci się zakupić auto producenta " + newCar.producer + " na kredyt\n");
+            this.car= newCar;}
+
+        else {System.out.println("Zainwestuj w botcoina póki jest obniżka\n");}
     }
 }
 

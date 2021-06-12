@@ -35,9 +35,9 @@ public class Main {
         //System.out.println(daria.pet.species);
         Car auto = new Car("93","Sab Auto Mobile");
         auto.color = "Pink";
-        auto.cena = 6322345.02;
+        auto.value = 6322345.02;
 
-        daria.car = auto;
+
 
 
        daria.setSalary(44.0);
@@ -48,8 +48,17 @@ public class Main {
 
        daria.setSalary(4424.0);
 
-       Double hajs = daria.getSalary();
-       System.out.println("Obecnie mam: " + hajs);
+        daria.setCar(auto);
+
+        daria.setSalary(536862.0);
+
+        daria.setCar(auto);
+
+       // daria.setSalary(6666666666666.0);
+
+       // daria.setCar(auto);
+
+       System.out.println("Obecnie mam: " + daria.getSalary() +" hajsu\n");
 
 
 
