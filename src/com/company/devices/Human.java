@@ -2,6 +2,9 @@ package com.company;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
+import com.company.devices.Phone;
+import com.company.devices.Car;
+
 public class Human {
     String firstName;
     String lastName;
@@ -50,6 +53,10 @@ public class Human {
             this.car= newCar;}
 
         else {System.out.println("Zainwestuj w botcoina póki jest obniżka\n");}
+    }
+
+    public String toString(){
+        return firstName+" "+lastName+" "+phone+" "+pet+" "+car+" "+salary;
     }
 }
 

@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.devices.Phone;
+import com.company.devices.Car;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -37,7 +40,9 @@ public class Main {
         auto.color = "Pink";
         auto.value = 6322345.02;
 
-
+        Car auto2 = new Car("93","Sab Auto Mobile");
+        auto2.color = "Pink";
+        auto2.value = 6322345.02;
 
 
        daria.setSalary(44.0);
@@ -60,7 +65,18 @@ public class Main {
 
        System.out.println("Obecnie mam: " + daria.getSalary() +" hajsu\n");
 
+       //porównywanie
+        System.out.println("Czy są takie same:");
+        System.out.println(auto
+                .equals(auto2));
 
+        System.out.println(daria);
+        System.out.println(auto);
+        System.out.println(dog);
+
+        Phone phone1 = new Phone("samsung","a34",16.0,"ddd");
+
+        System.out.println(phone1);
 
 
     }

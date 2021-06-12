@@ -61,4 +61,8 @@ public class Animal {
     String getNameAndOwner(String owner) {
         return owner + " has " + this.name;
     }
+
+    public String toString(){
+        return species+" "+weight+" "+name;
+    }
 }
