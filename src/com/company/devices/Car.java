@@ -1,6 +1,9 @@
 package com.company.devices;
 
-public class Car extends Devices{
+import com.company.Human;
+import com.company.Sellable.Sellable;
+
+public class Car extends Devices implements Sellable {
 
     public String color;
     public Double value;
@@ -9,7 +12,7 @@ public class Car extends Devices{
         super(model, producer, yearOfProductions);
     }
 
-    @java.lang.Override
+    @Override
     public void turnOn() {
         System.out.println("kopnij silnik aż zaskoczy");
     }
@@ -21,7 +24,23 @@ public class Car extends Devices{
         this.value=value;
     }
 
-
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.car != null && buyer.cash >= price)
+        {
+            buyer.car = seller.car;
+            seller.car = null;
+            buyer.cash = buyer.cash - price;
+            if (seller.cash == null)
+            {seller.cash = 0.0;}
+            seller.cash = seller.cash + price;
+            System.out.println("Od teraz " + buyer.car + " należy do " + buyer.firstName +
+                    ".\nGotówka po transakcji kupującego: " + buyer.cash +
+                    "\nGotówka po transakcji sprzedającego: " + seller.cash);
+        }
+        else
+        {System.out.println("Transakcja nie udana.");}
+    }
 
 
     public boolean equals(Object o) {

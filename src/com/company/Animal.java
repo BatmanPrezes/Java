@@ -1,6 +1,8 @@
 package com.company;
 
-public class Animal {
+import com.company.Sellable.Sellable;
+
+public class Animal implements Sellable {
     final public String species;
     private Double weight;
     String name;
@@ -62,7 +64,26 @@ public class Animal {
         return owner + " has " + this.name;
     }
 
+
     public String toString(){
         return species+" "+weight+" "+name;
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+       if (seller.pet != null && buyer.cash >= price)
+        {
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            buyer.cash = buyer.cash - price;
+            if (seller.cash == null)
+            {seller.cash = 0.0;}
+            seller.cash = seller.cash + price;
+            System.out.println("Od teraz " + buyer.pet.name + " należy do " + buyer.firstName +
+                               ".\nGotówka po transakcji kupującego: " + buyer.cash +
+                               "\nGotówka po transakcji sprzedającego: " + seller.cash);
+        }
+        else
+        {System.out.println("Transakcja nie udana.");}
     }
 }

@@ -6,12 +6,13 @@ import com.company.devices.Phone;
 import com.company.devices.Car;
 
 public class Human {
-    String firstName;
+    public String firstName;
     String lastName;
-    Phone phone;
+    public Phone phone;
     Animal pet;
-    private Car car;
+    public Car car;
     private Double salary;
+    public Double cash;
 
     // Getter
     public Double getSalary() {
