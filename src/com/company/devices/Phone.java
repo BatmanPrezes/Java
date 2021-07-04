@@ -2,16 +2,46 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 import com.company.Sellable.Sellable;
+import java.util.ArrayList;
 
-public abstract class Phone extends Devices implements Rechargeable, Sellable {
+public class Phone extends Devices implements Rechargeable, Sellable {
 
     Double screenSize;
     String os;
+    static final String defaultSeverIP = null;
 
     public Phone(String model, String producer, Integer yearOfProductions) {
         super(model, producer, yearOfProductions);
     }
 
+    public void installAnApp(String appName){
+
+        System.out.println("Zainstalowano apkę " + appName);
+
+    }
+    public void installAnApp(String appName, String appVersion){
+        System.out.println("Zainstalowano apkę " + appName + " wersja " + appVersion);
+    }
+
+    public void installAnApp(String appName, String appVersion, String iP){
+        System.out.println("Zainstalowano apkę " + appName + " wersja " + appVersion + " z serwera " + iP);
+
+    }
+
+    public void installAnApp(ArrayList<String> appNames){
+        System.out.println("Lista zainstalowanych apek: ");
+       // for ( int i = 0; i < appNames.length; i++)
+        {System.out.println(appNames);
+
+        }
+
+    }
+
+    public void installAnApp(URL url){
+
+        System.out.println("Apka " + url + " została zainstalowana");
+
+    }
     @Override
     public void turnOn() {
         System.out.println("stuknij w szybkę może zadziała");
@@ -28,6 +58,17 @@ public abstract class Phone extends Devices implements Rechargeable, Sellable {
     @Override
     public Double getBatteryLevel()
     {return 0.1;}
+
+    @java.lang.Override
+    public void feed() {
+
+    }
+
+    @java.lang.Override
+    public void feed(Double foodWeight) {
+
+    }
+
     // public String toString(){
    //     return producer+" "+model+" "+screenSize+" "+os;
    // }
@@ -48,5 +89,7 @@ public abstract class Phone extends Devices implements Rechargeable, Sellable {
         else
         {System.out.println("Transakcja nie udana.");}
     }
+
+
 
 }

@@ -7,6 +7,7 @@ import com.company.devices.Car;
 import com.company.devices.Devices;
 import com.company.creatures.Human;
 import com.company.creatures.Animal;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -19,31 +20,31 @@ public class Main {
             }
         };
 
-        FarmAnimal pig = new FarmAnimal("świnia");
-        pig.beEaten();
-        dog.name = "Bigosowa";
+        //FarmAnimal pig = new FarmAnimal("świnia");
+       // pig.beEaten();
+        //dog.name = "Bigosowa";
         //dog.weight = 12.0;
        // dog.species = "canis familiaris";
 
-        System.out.println(dog.name);
-        System.out.println(dog.species);
+        //System.out.println(dog.name);
+        //System.out.println(dog.species);
 
-        dog.printName();
-        dog.printNameAndOwner("Daria");
+        //dog.printName();
+        //dog.printNameAndOwner("Daria");
 
-        String text = dog.getNameAndOwner("Daria");
-        System.out.println(text);
+       // String text = dog.getNameAndOwner("Daria");
+       // System.out.println(text);
 
-        Human daria = new Human();
-        daria.pet = dog;
-        daria.firstName = "Daria";
-        daria.lastName = "Cesarzowa";
-        System.out.println(daria.pet);
-        Human maria = new Human();
-        maria.firstName ="Maria";
-        maria.cash = 78.0;
+        //Human daria = new Human();
+        //daria.pet = dog;
+       // daria.firstName = "Daria";
+        //daria.lastName = "Cesarzowa";
+       // System.out.println(daria.pet);
+        //Human maria = new Human();
+       // maria.firstName ="Maria";
+        //maria.cash = 78.0;
 
-        dog.sell(daria, maria, 50.0);
+       // dog.sell(daria, maria, 50.0);
 
         //Car auto = new Car("93","Sab Auto Mobile",1996);
         //auto.color = "Pink";
@@ -66,16 +67,16 @@ public class Main {
 
         //daria.sell(daria, maria, 777.0); <--- no nie mogę sprzedać sama siebie bo w human nie ma tej metody xd
 
-        dog.feed(680.77);
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.feed();
+        //dog.feed(680.77);
+        //dog.takeForAWalk();
+       // dog.takeForAWalk();
+       // dog.takeForAWalk();
+      //  dog.takeForAWalk();
+      //  dog.takeForAWalk();
+      //  dog.takeForAWalk();
+      //  dog.takeForAWalk();
+      //  dog.takeForAWalk();
+       // dog.feed();
         //System.out.println(daria.pet.species);
 
 
@@ -114,7 +115,24 @@ public class Main {
        // System.out.println(dog);
 
 
-        //Phone phone1 = new Phone("samsung","a34",16.0,"ddd");
+        Phone phone1 = new Phone("samsung","a34",3);
+
+        phone1.installAnApp("gra o zombie");
+
+        phone1.installAnApp("gra o zombie", "wersja 3");
+
+        phone1.installAnApp("gra o zombie", "wersja 3", "32.3451.1");
+
+        ArrayList<String> apps = new ArrayList<String>();
+
+        apps.add("Apka 1");
+
+        apps.add("Apka 2");
+
+        apps.add("Apka 3");
+
+        phone1.installAnApp(apps);
+
 
         //System.out.println(phone1);
 
