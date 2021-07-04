@@ -1,15 +1,26 @@
 package com.company;
 
+import com.company.creatures.FarmAnimal;
 import com.company.devices.Devices;
 import com.company.devices.Phone;
 import com.company.devices.Car;
 import com.company.devices.Devices;
+import com.company.creatures.Human;
+import com.company.creatures.Animal;
 
 public class Main {
 
 
     public static void main(String[] args) {
-        Animal dog = new Animal("canis familiaris");
+        Animal dog = new Animal("canis familiaris") {
+            @java.lang.Override
+            public void beEaten() {
+
+            }
+        };
+
+        FarmAnimal pig = new FarmAnimal("świnia");
+        pig.beEaten();
         dog.name = "Bigosowa";
         //dog.weight = 12.0;
        // dog.species = "canis familiaris";
@@ -34,43 +45,43 @@ public class Main {
 
         dog.sell(daria, maria, 50.0);
 
-        Car auto = new Car("93","Sab Auto Mobile",1996);
-        auto.color = "Pink";
-        auto.value = 6322345.02;
+        //Car auto = new Car("93","Sab Auto Mobile",1996);
+        //auto.color = "Pink";
+        //.value = 6322345.02;
 
-        daria.car = auto;
+        //daria.car = auto;
 
-        auto.sell(daria, maria, 777.0);
+        //auto.sell(daria, maria, 777.0);
 
-        maria.cash = 7777.0;
+        //maria.cash = 7777.0;
 
-        auto.sell(daria, maria, 777.0);
+        //auto.sell(daria, maria, 777.0);
 
-        Phone phone1 = new Phone("samsung","a34",1999);
+        //Phone phone1 = new Phone("samsung","a34",1999);
 
-        phone1.sell(daria, maria, 777.0);
+        //phone1.sell(daria, maria, 777.0);
 
-        daria.phone = phone1;
-        phone1.sell(daria, maria, 777.0);
+        //daria.phone = phone1;
+        //phone1.sell(daria, maria, 777.0);
 
         //daria.sell(daria, maria, 777.0); <--- no nie mogę sprzedać sama siebie bo w human nie ma tej metody xd
 
-        //dog.feed();
-       // dog.takeForAWalk();
-        //dog.takeForAWalk();
-        //dog.takeForAWalk();
-        //dog.takeForAWalk();
-        //dog.takeForAWalk();
-        //dog.takeForAWalk();
-        //dog.takeForAWalk();
-        //dog.takeForAWalk();
-        //dog.feed();
+        dog.feed(680.77);
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.feed();
         //System.out.println(daria.pet.species);
 
 
-        Car auto2 = new Car("93","Sab Auto Mobile",1996);
-        auto2.color = "Pink";
-        auto2.value = 6322345.02;
+        //Car auto2 = new Car("93","Sab Auto Mobile",1996);
+        //auto2.color = "Pink";
+        //auto2.value = 6322345.02;
 
 
        //daria.setSalary(44.0);

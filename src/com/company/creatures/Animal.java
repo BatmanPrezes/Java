@@ -1,11 +1,12 @@
-package com.company;
+package com.company.creatures;
 
 import com.company.Sellable.Sellable;
 
-public class Animal implements Sellable {
+public abstract class Animal implements Sellable {
     final public String species;
+    public String name;
     private Double weight;
-    String name;
+
 
     //konstruktor
     public Animal(String species) {
@@ -23,15 +24,16 @@ public class Animal implements Sellable {
         }
     }
 
-    void printName() {
+    public void printName() {
         System.out.println("my name is: " + this.name);
     }
 
-    void printNameAndOwner(String owner) {
+    public void printNameAndOwner(String owner) {
         System.out.println(owner + " has " + this.name);
     }
 
-    void feed() {
+    @Override
+    public void feed() {
         if (this.weight > 0) {
             this.weight += 1;
             System.out.println("Omnomnom. +1 do brzuszka (" + this.weight + ")");
@@ -40,7 +42,7 @@ public class Animal implements Sellable {
         }
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (this.weight > 0) {
             this.weight -= 1;
             if (this.weight == 0) {
@@ -56,11 +58,11 @@ public class Animal implements Sellable {
 
     }
 
-    Double getWeight() {
+    public Double getWeight() {
         return this.weight;
     }
 
-    String getNameAndOwner(String owner) {
+    public String getNameAndOwner(String owner) {
         return owner + " has " + this.name;
     }
 
@@ -86,4 +88,11 @@ public class Animal implements Sellable {
         else
         {System.out.println("Transakcja nie udana.");}
     }
+
+
+    @Override
+    public void feed(Double foodWeight) {
+        System.out.println("Właśnie nakarmiłeś pupila karmą o wadzę: " + foodWeight);
+    }
+    public abstract void beEaten();
 }

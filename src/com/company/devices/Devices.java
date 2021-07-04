@@ -1,4 +1,5 @@
 package com.company.devices;
+import com.company.creatures.Human;
 
 abstract  public class Devices {
     public final String producer;
@@ -13,6 +14,8 @@ abstract  public class Devices {
     }
 
     abstract public void turnOn();
+
+    public abstract void sell(Human seller, Human buyer, Double price);
 
     public String toString(){
         return producer+" "+model+" "+yearOfProductions;

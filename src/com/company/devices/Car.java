@@ -1,9 +1,9 @@
 package com.company.devices;
 
-import com.company.Human;
+import com.company.creatures.Human;
 import com.company.Sellable.Sellable;
 
-public class Car extends Devices implements Sellable {
+public abstract class Car extends Devices implements Sellable {
 
     public String color;
     public Double value;

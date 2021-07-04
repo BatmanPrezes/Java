@@ -1,9 +1,9 @@
 package com.company.devices;
 
-import com.company.Human;
+import com.company.creatures.Human;
 import com.company.Sellable.Sellable;
 
-public class Phone extends Devices implements Rechargeable, Sellable {
+public abstract class Phone extends Devices implements Rechargeable, Sellable {
 
     Double screenSize;
     String os;

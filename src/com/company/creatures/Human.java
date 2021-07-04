@@ -1,4 +1,4 @@
-package com.company;
+package com.company.creatures;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
@@ -7,9 +7,9 @@ import com.company.devices.Car;
 
 public class Human {
     public String firstName;
-    String lastName;
+    public Animal pet;
+    public String lastName;
     public Phone phone;
-    Animal pet;
     public Car car;
     private Double salary;
     public Double cash;
